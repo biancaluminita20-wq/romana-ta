@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="google-site-verification"
+    content="Ig2P9jp6tUuneH2HE6LV8W-F4RLdU89PfDxhL6QpBsw"
+  >
+
+  <title>Română — Grile pentru admitere</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       AUTENTIFICARE
+       ===================================================== -->
+
+  <div id="authScreen" style="display: none;">
+
+    <div class="auth-box">
+
+      <h2>
+        Română — Grile pentru admitere
+      </h2>
+
+      <p>
+        Autentifică-te pentru a continua.
+      </p>
+
+
+      <form id="loginForm">
+
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="E-mail"
+          required
+        >
+
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Parolă"
+          required
+        >
+
+        <button type="submit">
+          Autentificare
+        </button>
+
+        <p id="loginMessage"></p>
+
+      </form>
+
+
+      <button
+        type="button"
+        id="showSignupBtn"
+      >
+        Creează cont
+      </button>
+
+
+      <form
+        id="signupForm"
+        style="display: none;"
+      >
+
+        <input
+          type="email"
+          id="signupEmail"
+          placeholder="E-mail"
+          required
+        >
+
+        <input
+          type="password"
+          id="signupPassword"
+          placeholder="Parolă"
+          required
+        >
+
+        <input
+          type="password"
+          id="signupPasswordConfirm"
+          placeholder="Repetă parola"
+          required
+        >
+
+        <button type="submit">
+          Creează cont
+        </button>
+
+        <p id="signupMessage"></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       BUTOANE FIXE
+       ===================================================== -->
+
+  <button
+    class="menu-toggle"
+    id="menuToggle"
+    aria-label="Deschide meniul"
+  >
+    ☰
+  </button>
+
+
+  <button
+    class="theme-toggle"
+    id="themeToggle"
+    aria-label="Schimbă tema"
+  >
+    🌙
+  </button>
+
+
+  <div
+    class="menu-overlay"
+    id="menuOverlay"
+  ></div>
+
+
+  <!-- =====================================================
+       MENIU LATERAL
+       ===================================================== -->
+
+  <aside
+    class="sidebar"
+    id="sidebar"
+  >
+
+    <div class="sidebar-top">
+
+      <div class="brand">
+
+        <div class="brand-mark">
+          R
+        </div>
+
+        <div class="brand-text">
+
+          <strong>
+            ROMÂNĂ
+          </strong>
+
+          <span>
+            grile & pregătire
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <nav>
+
+        <button
+          class="nav-btn active"
+          data-view="home"
+        >
+          ⌂
+          <span>Acasă</span>
+        </button>
+
+
+        <button
+          class="nav-btn"
+          data-view="chapters"
+        >
+          ▦
+          <span>Capitole</span>
+        </button>
+
+
+        <button
+          class="nav-btn"
+          data-view="materie"
+        >
+          📚
+          <span>Materie</span>
+        </button>
+
+
+        <button
+          class="nav-btn"
+          data-view="quiz"
+        >
+          ✎
+          <span>Grile</span>
+        </button>
+
+
+        <button
+          class="nav-btn"
+          data-view="mistakes"
+        >
+          ✕
+          <span>Greșelile mele</span>
+        </button>
+
+
+        <button
+          class="nav-btn"
+          data-view="favorites"
+        >
+          ☆
+          <span>Favorite</span>
+        </button>
+
+
+        <button
+          class="nav-btn"
+          data-view="quickTest"
+        >
+          ⚡
+          <span>Test rapid</span>
+        </button>
+
+
+        <button
+          class="nav-btn"
+          data-view="simulation"
+        >
+          🎯
+          <span>Simulare</span>
+        </button>
+
+
+        <button
+          class="nav-btn"
+          data-view="notes"
+        >
+          📝
+          <span>Notițele mele</span>
+        </button>
+
+
+        <button
+          class="nav-btn"
+          data-view="search"
+        >
+          🔎
+          <span>Căutare</span>
+        </button>
+
+
+        <button
+          class="nav-btn"
+          data-view="stats"
+        >
+          ◔
+          <span>Progresul meu</span>
+        </button>
+
+      </nav>
+
+    </div>
+
+
+    <div class="sidebar-bottom">
+
+      <div class="mini-card">
+
+        <span>
+          Româna Ta
+        </span>
+
+        <b>
+          Pregătire pentru admitere.
+        </b>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =====================================================
+       CONȚINUT PRINCIPAL
+       ===================================================== -->
+
+  <main class="main">
+
+
+    <!-- ===================================================
+         TOPBAR
+         =================================================== -->
+
+    <header class="topbar">
+
+      <div>
+
+        <span class="eyebrow">
+          PREGĂTIRE
+        </span>
+
+        <h1 id="pageTitle">
+          Bun venit!
+        </h1>
+
+      </div>
+
+
+      <div class="profile">
+
+        <div
+          class="avatar"
+          id="profileAvatar"
+        >
+          B
+        </div>
+
+        <span id="profileName">
+          Vizitator
+        </span>
+
+      </div>
+
+    </header>
+
+
+    <!-- ===================================================
+         ACASĂ
+         =================================================== -->
+
+    <section
+      id="home"
+      class="view active-view"
+    >
+
+      <div class="hero">
+
+        <div>
+
+          <span class="pill">
+            LIMBA ROMÂNĂ
+          </span>
+
+
+          <h2>
+            Învață pe capitole.<br>
+            <em>Exersează prin grile.</em>
+          </h2>
+
+
+          <p>
+            Construiește-ți treptat baza pentru admitere,
+            capitol cu capitol.
+          </p>
+
+
+          <div class="home-actions">
+
+            <button
+              class="primary"
+              id="startBtn"
+            >
+              Începe să exersezi →
+            </button>
+
+            <button
+              class="secondary-btn"
+              id="continueBtn"
+            >
+              Continuă de unde ai rămas
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-shape">
+
+          <div class="hero-letter">
+            Ă
+          </div>
+
+
+          <div class="floating-card">
+
+            ✓
+
+            <span>
+              Răspunsuri verificate
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ===============================================
+           DASHBOARD RAPID
+           =============================================== -->
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            PANOURUL MEU
+          </span>
+
+          <h3>
+            Cum stau?
+          </h3>
+
+        </div>
+
+      </div>
+
+
+      <div class="home-stats-grid">
+
+
+        <div class="home-stat">
+
+          <span>
+            Întrebări rezolvate
+          </span>
+
+          <strong id="homeAnswered">
+            0
+          </strong>
+
+        </div>
+
+
+        <div class="home-stat">
+
+          <span>
+            Corecte
+          </span>
+
+          <strong
+            id="homeCorrect"
+            class="stat-correct"
+          >
+            0
+          </strong>
+
+          <small id="homeCorrectPercent">
+            0%
+          </small>
+
+        </div>
+
+
+        <div class="home-stat">
+
+          <span>
+            Greșite
+          </span>
+
+          <strong
+            id="homeWrong"
+            class="stat-wrong"
+          >
+            0
+          </strong>
+
+          <small id="homeWrongPercent">
+            0%
+          </small>
+
+        </div>
+
+
+        <div class="home-stat">
+
+          <span>
+            Capitole începute
+          </span>
+
+          <strong id="homeChaptersStarted">
+            0
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- ===============================================
+           CONTINUĂ
+           =============================================== -->
+
+      <div
+        id="continueCard"
+        class="continue-card hidden"
+      >
+
+        <div>
+
+          <span class="eyebrow">
+            CONTINUĂ
+          </span>
+
+          <h3 id="continueTitle">
+            —
+          </h3>
+
+          <p id="continueText">
+            —
+          </p>
+
+        </div>
+
+
+        <button
+          class="primary"
+          id="continueCardBtn"
+        >
+          Continuă →
+        </button>
+
+      </div>
+
+
+      <!-- ===============================================
+           CAPITOLE
+           =============================================== -->
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            STRUCTURĂ
+          </span>
+
+          <h3>
+            Capitole de gramatică
+          </h3>
+
+        </div>
+
+
+        <button
+          class="text-btn"
+          data-view-target="chapters"
+        >
+          Vezi toate →
+        </button>
+
+      </div>
+
+
+      <div
+        class="chapter-grid"
+        id="homeChapters"
+      ></div>
+
+    </section>
+
+
+    <!-- ===================================================
+         CAPITOLE
+         =================================================== -->
+
+    <section
+      id="chapters"
+      class="view"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            ROMÂNĂ
+          </span>
+
+          <h2>
+            Capitole
+          </h2>
+
+          <p>
+            Alege capitolul din care vrei să înveți
+            sau să rezolvi grile.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="chapter-grid"
+        id="allChapters"
+      ></div>
+
+    </section>
+
+
+    <!-- ===================================================
+         MATERIE
+         =================================================== -->
+
+    <section
+      id="materie"
+      class="view"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            ÎNVAȚĂ
+          </span>
+
+          <h2>
+            Materie
+          </h2>
+
+          <p>
+            Toată materia de Română, organizată pe capitole.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="subject-layout"
+        id="materieList"
+      ></div>
+
+    </section>
+
+
+    <!-- ===================================================
+         GRILE
+         =================================================== -->
+
+    <section
+      id="quiz"
+      class="view"
+    >
+
+      <button
+        class="back-btn"
+        id="backToChapters"
+      >
+        ← Înapoi la capitole
+      </button>
+
+
+      <div class="quiz-wrap">
+
+
+        <div class="quiz-top">
+
+          <div>
+
+            <span
+              class="eyebrow"
+              id="quizChapter"
+            >
+              PRONUME
+            </span>
+
+            <h2 id="quizTitle">
+              Grile
+            </h2>
+
+          </div>
+
+
+          <div
+            class="counter"
+            id="counter"
+          >
+            1 / 3
+          </div>
+
+        </div>
+
+
+        <!-- TOGGLE MANUAL / AUTOMAT -->
+
+        <div class="quiz-mode">
+
+          <button
+            type="button"
+            id="quizModeToggle"
+            class="quiz-toggle"
+            aria-label="Mod manual activ"
+          >
+            <span class="quiz-toggle-dot"></span>
+          </button>
+
+        </div>
+
+
+        <div class="progress">
+
+          <div
+            id="progressBar"
+          ></div>
+
+        </div>
+
+
+        <div class="question-card">
+
+
+          <div
+            class="question-number"
+            id="questionNumber"
+          >
+            ÎNTREBAREA 01
+          </div>
+
+
+          <div class="question-actions">
+
+            <button
+              type="button"
+              id="favoriteBtn"
+              class="favorite-btn"
+              aria-label="Adaugă la favorite"
+            >
+              ☆
+            </button>
+
+          </div>
+
+
+          <h3 id="questionText"></h3>
+
+
+          <div
+            class="answers"
+            id="answers"
+          ></div>
+
+
+          <div
+            id="feedback"
+            class="feedback hidden"
+          ></div>
+
+
+          <button
+            id="nextBtn"
+            class="primary next hidden"
+          >
+            Următoarea întrebare →
+          </button>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         GREȘELILE MELE
+         =================================================== -->
+
+    <section
+      id="mistakes"
+      class="view"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            REPETĂ
+          </span>
+
+          <h2>
+            Greșelile mele
+          </h2>
+
+          <p>
+            Întrebările la care ai răspuns greșit.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="mistakesContent"
+        class="special-content"
+      ></div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FAVORITE
+         =================================================== -->
+
+    <section
+      id="favorites"
+      class="view"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            SALVATE
+          </span>
+
+          <h2>
+            Favorite
+          </h2>
+
+          <p>
+            Întrebările pe care ai ales să le păstrezi.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="favoritesContent"
+        class="special-content"
+      ></div>
+
+    </section>
+
+
+    <!-- ===================================================
+         TEST RAPID
+         =================================================== -->
+
+    <section
+      id="quickTest"
+      class="view"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            EXERCIȚIU
+          </span>
+
+          <h2>
+            Test rapid
+          </h2>
+
+          <p>
+            Alege câte întrebări vrei să rezolvi.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="test-options">
+
+        <button
+          class="test-option"
+          data-test-size="10"
+        >
+          <strong>
+            10
+          </strong>
+
+          <span>
+            întrebări
+          </span>
+        </button>
+
+
+        <button
+          class="test-option"
+          data-test-size="20"
+        >
+          <strong>
+            20
+          </strong>
+
+          <span>
+            întrebări
+          </span>
+        </button>
+
+
+        <button
+          class="test-option"
+          data-test-size="50"
+        >
+          <strong>
+            50
+          </strong>
+
+          <span>
+            întrebări
+          </span>
+        </button>
+
+
+        <button
+          class="test-option"
+          data-test-size="all"
+        >
+          <strong>
+            TOATE
+          </strong>
+
+          <span>
+            întrebările
+          </span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SIMULARE
+         =================================================== -->
+
+    <section
+      id="simulation"
+      class="view"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            ADMITERE
+          </span>
+
+          <h2>
+            Simulare
+          </h2>
+
+          <p>
+            Testează-te în condiții cât mai apropiate de examen.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="simulation-card">
+
+        <div>
+
+          <span class="eyebrow">
+            SIMULARE ROMÂNĂ
+          </span>
+
+          <h3>
+            Ești pregătită?
+          </h3>
+
+          <p>
+            Întrebările vor fi alese automat din baza ta de grile.
+          </p>
+
+        </div>
+
+
+        <div class="simulation-settings">
+
+          <label>
+            Număr de întrebări
+
+            <select id="simulationSize">
+
+              <option value="20">
+                20
+              </option>
+
+              <option value="30">
+                30
+              </option>
+
+              <option value="50">
+                50
+              </option>
+
+              <option value="100">
+                100
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <button
+            class="primary"
+            id="startSimulationBtn"
+          >
+            Începe simularea →
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         NOTIȚELE MELE
+         =================================================== -->
+
+    <section
+      id="notes"
+      class="view"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            PERSONAL
+          </span>
+
+          <h2>
+            Notițele mele
+          </h2>
+
+          <p>
+            Scrie aici observațiile tale pentru materia de Română.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="notesContent"
+        class="notes-grid"
+      ></div>
+
+    </section>
+
+
+    <!-- ===================================================
+         CĂUTARE
+         =================================================== -->
+
+    <section
+      id="search"
+      class="view"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            CAUTĂ
+          </span>
+
+          <h2>
+            Căutare
+          </h2>
+
+          <p>
+            Găsește rapid materia sau grilele de care ai nevoie.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="search-box">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Caută un termen, o lecție sau o întrebare..."
+          autocomplete="off"
+        >
+
+      </div>
+
+
+      <div
+        id="searchResults"
+        class="search-results"
+      ></div>
+
+    </section>
+
+
+    <!-- ===================================================
+         STATISTICI
+         =================================================== -->
+
+    <section
+      id="stats"
+      class="view"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="eyebrow">
+            STATISTICI
+          </span>
+
+          <h2>
+            Progresul meu
+          </h2>
+
+          <p>
+            Rezultatele sunt salvate local în acest browser.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="stats-grid">
+
+
+        <div class="stat-card">
+
+          <span>
+            Întrebări rezolvate
+          </span>
+
+          <b id="statAnswered">
+            0
+          </b>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <span>
+            Întrebări corecte
+          </span>
+
+          <b
+            id="statCorrect"
+            class="stat-correct"
+          >
+            0
+          </b>
+
+          <small id="statCorrectPercent">
+            0%
+          </small>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <span>
+            Întrebări greșite
+          </span>
+
+          <b
+            id="statWrong"
+            class="stat-wrong"
+          >
+            0
+          </b>
+
+          <small id="statWrongPercent">
+            0%
+          </small>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="section-head small">
+
+        <h3>
+          Progres pe capitole
+        </h3>
+
+      </div>
+
+
+      <div
+        id="statsChapters"
+        class="stats-chapters"
+      ></div>
+
+
+      <!-- ===============================================
+           EVOLUȚIE
+           =============================================== -->
+
+      <div class="section-head small">
+
+        <h3>
+          Evoluția mea
+        </h3>
+
+      </div>
+
+
+      <div
+        id="progressHistory"
+        class="progress-history"
+      ></div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       SUPABASE
+       ===================================================== -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
